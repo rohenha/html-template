@@ -1,0 +1,32 @@
+{
+  "name": "project-structure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-git": "^2.2.0",
+    "gulp-minify": "0.0.15",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-strip-css-comments": "^1.2.0"
+  },
+  "browserslist": [
+    "last 3 version",
+    "> 1%",
+    "safari >= 5",
+    "ie >= 7",
+    "opera >= 12.1",
+    "IOS >= 6",
+    "android >= 4"
+  ]
+}
