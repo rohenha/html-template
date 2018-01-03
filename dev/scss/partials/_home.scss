@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #56CCF2; /* Old browsers */
+  background:    -moz-linear-gradient(-45deg, #56CCF2 0%, #2F80ED 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #56CCF2 0%,#2F80ED 100%); /* Chrome10-25,Safari5.1-6 */
+  background:         linear-gradient(135deg, #56CCF2 0%,#2F80ED 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56ccf2', endColorstr='#2f80ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+body {
+  overflow: hidden;
+}
+
+.controls {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 40px;
+  z-index: 9999;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  &.open {
+    h1 {
+      &:hover .arrow {
+        transform: translateY(0) rotate(-135deg);
+      }
+      .arrow {
+        transform: translateX(-3px) rotate(-135deg);
+      }
+    }
+    .controls__container {
+      max-width: 400px;
+    }
+  }
+  h1 {
+    background-color: rgba(0,0,0,.2);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    &:hover .arrow {
+      transform: translateX(0px) rotate(45deg);
+    }
+    .arrow {
+      width: 12px;
+      height: 12px;
+      border-left: 2px solid #FFF;
+      border-bottom: 2px solid #FFF;
+      display: inline-block;
+      transform: translateX(3px) rotate(45deg);
+      transition: transform .3s ease-out;
+    }
+  }
+  &__container {
+    overflow: hidden;
+    max-width: 0;
+    height: 100%;
+    transition: max-width .3s ease-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .control {
+    cursor: pointer;
+    padding: 7px 10px;
+    width: 100px;
+    border-radius: 3px;
+    border: 1px solid #0452A5;
+    margin: 0 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-out;
+    &:first-child {
+      margin: 0 5px 0 0;
+    }
+    &:last-child {
+      margin: 0 5px 0 5px;
+    }
+    p {
+      width: 100%;
+      font-size: 12px;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #0452A5;
+      transition: all .3s ease-out;
+    }
+    &:hover {
+      background-color: #0452A5;
+      p {
+        color: #FFF;
+      }
+    }
+  }
+}
